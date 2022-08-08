@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Expenses chart component</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </script>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; margin-top: 30px; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <main class="main-container">
+      <header class="header">
+        <div class="left-header">
+        <p>my <span>balance</span></p>
+        <p class="balance">$921.48</p>
+        </div>
+        <img src="./images/logo.svg" alt="double-circle">
+        </header>
+      <section class="section-container">
+        <h1>Spending - Last 7 days</h1>
+        <div>
+          <canvas id="myChart">
+            <canvas id="myChart" width="400" height="400"></canvas>
+<script>
+  const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'],
+        datasets: [{
+            label: '# USD',
+            data: [17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48],
+            backgroundColor: [
+                'hsl(10, 79%, 65%)',
+                'hsl(10, 79%, 65%)',
+                'hsl(186, 34%, 60%)',
+                'hsl(10, 79%, 65%)',
+                'hsl(10, 79%, 65%)',
+                'hsl(10, 79%, 65%)'
+            ],
+            border: [
+                'hsl(10, 79%, 65%)',
+                'hsl(10, 79%, 65%)',
+                'hsl(186, 34%, 60%)',
+                'hsl(10, 79%, 65%)',
+                'hsl(10, 79%, 65%)',
+                'hsl(10, 79%, 65%)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+</script>
+          </canvas>
+        </div>      
+        <p class="chart"></p>
+        <div class="footer">
+          <div class="left-footer">
+            <p style="font-size: 12px; color: rgb(150, 150, 150)">Total this month</p>
+            <p style="font-size: 25px;">$478.33</p>
+          </div>
+          <div class="right-footer">
+            <p>+2.4%</p>
+            <p style="font-size: 12px; color: rgb(150, 150, 150)">From last month</p>
+          </div>
+        </div>
+        </section>
+    </main>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Tunde Adelani</a>.
+    </div>
+  </div>
+</body>
+
+</html>
